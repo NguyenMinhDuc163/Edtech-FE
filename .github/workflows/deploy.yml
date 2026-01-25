@@ -32,7 +32,7 @@ jobs:
       - name: Create .env file
         run: |
           if [ -z "${{ secrets.VITE_API_URL }}" ]; then
-            echo "VITE_API_URL=https://edtech_service.nguyenduc.click" > .env
+            echo "VITE_API_URL=https://edtech_service.ndtech.io.vn" > .env
           else
             echo "VITE_API_URL=${{ secrets.VITE_API_URL }}" > .env
           fi

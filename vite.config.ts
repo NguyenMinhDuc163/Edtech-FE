@@ -17,7 +17,7 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
-    allowedHosts: ['edtech.nguyenduc.click'],
+    allowedHosts: ['edtech.ndtech.io.vn'],
 
     proxy: {
       '^/azure-blob/.*': {
