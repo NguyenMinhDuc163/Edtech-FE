@@ -1,0 +1,267 @@
+.AdminLesson__Container {
+  padding: 32px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  color: #334155;
+}
+
+.AdminLesson__Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.AdminLesson__HeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.AdminLesson__BackBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+.AdminLesson__BackBtn:hover {
+  background: #eff6ff;
+  color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.AdminLesson__TitleGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.AdminLesson__Label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+}
+
+.AdminLesson__Title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.AdminLesson__Meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.AdminLesson__Grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.AdminLesson__Card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.AdminLesson__Card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e1;
+}
+
+.AdminLesson__CardHeader {
+  padding: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.AdminLesson__Index {
+  background: #f1f5f9;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.AdminLesson__LessonInfo {
+  flex: 1;
+}
+
+.AdminLesson__LessonName {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.AdminLesson__Date {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.AdminLesson__CardBody {
+  padding: 20px;
+  color: #475569;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.AdminLesson__FilesArea {
+  padding: 16px 20px;
+  background-color: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+}
+
+.AdminLesson__FilesLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.AdminLesson__FilesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.AdminLesson__FileChip {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.AdminLesson__FileChip:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  transform: translateY(-2px);
+}
+
+.AdminLesson__FileIconBox {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.AdminLesson__Icon.video {
+  color: #ef4444;
+}
+.AdminLesson__Icon.pdf {
+  color: #f59e0b;
+}
+.AdminLesson__Icon.doc {
+  color: #3b82f6;
+}
+.AdminLesson__Icon.default {
+  color: #64748b;
+}
+
+.AdminLesson__FileMeta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.AdminLesson__FileName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #334155;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AdminLesson__FileType {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.AdminLesson__NoFiles {
+  padding: 16px 20px;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  background-color: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+}
+
+.AdminLesson__EmptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  color: #64748b;
+}
+
+.AdminLesson__EmptyImg {
+  width: 100px;
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .AdminLesson__Container {
+    padding: 16px;
+  }
+
+  .AdminLesson__Header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .AdminLesson__Meta {
+    align-self: flex-start;
+  }
+
+  .AdminLesson__FilesList {
+    grid-template-columns: 1fr;
+  }
+}

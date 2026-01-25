@@ -1,0 +1,278 @@
+.category-stats-section {
+  background: linear-gradient(180deg, #f4f8ff 0%, #ebf3ff 100%);
+  border-radius: 24px;
+  padding: 60px 40px;
+  font-family: "Inter", sans-serif;
+  margin: 40px 0;
+  position: relative;
+}
+
+.stats-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.stats-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+.stats-header p {
+  font-size: 16px;
+  color: #718096;
+}
+
+.stats-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.category-stats-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  gap: 24px;
+  overflow-x: auto;
+  padding: 30px 10px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: grab;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.category-stats-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.category-stats-grid:active {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.stat-card {
+  flex: 0 0 auto;
+  min-width: 280px;
+  max-width: 280px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(61, 92, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(61, 92, 255, 0.15);
+}
+
+.stat-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.stat-category-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 20px;
+  height: 48px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stat-metrics {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #f7fafc;
+  padding: 12px 5px;
+  border-radius: 12px;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.metric-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: #3d5cff;
+}
+.metric-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #a0aec0;
+  font-weight: 600;
+}
+.metric-divider {
+  width: 1px;
+  height: 25px;
+  background-color: #e2e8f0;
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 29px;
+}
+
+.rating-value {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.star-icon {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.stat-footer {
+  margin-top: auto;
+  font-size: 13px;
+  color: #718096;
+}
+.student-count strong {
+  color: #2d3748;
+}
+.student-count.highlight {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.nav-btn:hover {
+  background: #3d5cff;
+  color: white;
+  border-color: #3d5cff;
+  transform: scale(1.1);
+}
+
+.nav-btn.prev {
+  margin-right: 15px;
+}
+.nav-btn.next {
+  margin-left: 15px;
+}
+
+@media (max-width: 1024px) {
+  .nav-btn {
+    display: none !important;
+  }
+
+  .stats-section {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-header h2 {
+    font-size: 24px;
+    padding: 0 10px;
+  }
+
+  .stats-header p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .stats-grid {
+    gap: 16px;
+    padding: 20px 20px 40px 20px;
+
+    scroll-padding-left: 20px;
+  }
+
+  .stat-card {
+    width: 260px;
+    padding: 24px 12px;
+  }
+
+  .stat-category-title {
+    font-size: 16px;
+    height: 42px;
+    margin-bottom: 16px;
+  }
+
+  .stat-metrics {
+    padding: 10px 4px;
+  }
+
+  .metric-divider {
+    margin: 0 2px;
+    height: 20px;
+  }
+
+  .metric-value,
+  .rating-value {
+    font-size: 16px;
+  }
+
+  .rating-box {
+    gap: 2px;
+  }
+
+  .star-icon {
+    font-size: 12px;
+  }
+
+  .metric-label {
+    font-size: 9px;
+    letter-spacing: -0.2px;
+  }
+
+  .stat-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 374px) {
+  .stat-card {
+    width: 240px;
+  }
+}

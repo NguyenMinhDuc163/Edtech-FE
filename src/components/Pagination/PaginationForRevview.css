@@ -1,0 +1,33 @@
+.pagination-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-btn {
+  padding: 8px 12px;
+  background: #f1f1f1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 36px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(.active) {
+  background: #e1e1e1;
+}
+
+.page-btn.active {
+  background: #4b7bec;
+  color: #fff;
+  font-weight: 600;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}

@@ -1,0 +1,44 @@
+.admin-leaderboard-container {
+  padding: 110px 20px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.admin-leaderboard-card {
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 24px;
+}
+
+.admin-leaderboard-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.rank-cell {
+  font-weight: bold;
+  color: #2563eb;
+  text-align: center;
+}
+
+.admin-leaderboard-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}

@@ -1,0 +1,145 @@
+.lb-widget {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  padding: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.lb-widget__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.lb-widget__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.lb-widget__icon {
+  font-size: 20px;
+  color: #f59e0b;
+}
+
+.lb-widget__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.lb-widget__list::-webkit-scrollbar {
+  width: 4px;
+}
+.lb-widget__list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.lb-widget__list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.lb-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+.lb-item:hover {
+  background-color: #f8fafc;
+}
+
+.lb-item--active {
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+}
+
+.lb-item__rank {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #64748b;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.lb-rank--top1 {
+  color: #f59e0b;
+  font-size: 20px;
+}
+.lb-rank--top2 {
+  color: #94a3b8;
+  font-size: 18px;
+}
+.lb-rank--top3 {
+  color: #b45309;
+  font-size: 18px;
+}
+
+.lb-item__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.lb-item__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.lb-item__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lb-item__sub {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+.lb-item__score {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-left: 10px;
+  background: #eff6ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.lb-widget__empty {
+  text-align: center;
+  padding: 30px 0;
+  color: #94a3b8;
+  font-size: 14px;
+}

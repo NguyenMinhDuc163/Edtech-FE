@@ -1,0 +1,443 @@
+.ai-syllabus-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 80px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 32px;
+  font-size: 28px;
+}
+
+.input-section {
+  margin-bottom: 24px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  resize: vertical;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.preview-btn {
+  background-color: #6b7280;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.import-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  color: #ef4444;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.preview-section {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.preview-title {
+  text-align: center;
+  color: #111827;
+  margin-bottom: 32px;
+  font-size: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 16px;
+}
+
+.section-card {
+  margin-bottom: 28px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  border-left: 5px solid #2563eb;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.section-toggle:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.arrow {
+  font-size: 14px;
+  color: #2563eb;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.arrow.expanded {
+  transform: rotate(90deg);
+}
+
+.section-title {
+  color: #1e40af;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.lesson-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 16px 0 0 0;
+}
+
+.lesson-item {
+  font-size: 15px;
+  color: #374151;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.lesson-item::before {
+  color: #2563eb;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+/* Thêm các style mới cho phần chỉnh sửa */
+.course-title-wrapper {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.course-title-view {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  padding: 8px 0;
+}
+.course-title-editor {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.course-title-input {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #2563eb;
+  background: transparent;
+  width: 100%;
+  max-width: 800px;
+  padding: 8px 0;
+}
+
+.course-title-input:focus {
+  outline: none;
+}
+
+.section-title-editor {
+  margin-bottom: 16px;
+}
+.section-title-view {
+  color: #1e40af;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.section-title-input {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e40af;
+  border: none;
+  border-bottom: 2px solid #2563eb;
+  background: transparent;
+  flex: 1;
+  padding: 4px 0;
+}
+
+.section-title-input:focus {
+  outline: none;
+}
+.lesson-title-view {
+  font-size: 15px;
+  color: #374151;
+  display: block;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+.lesson-title-input {
+  font-size: 15px;
+  color: #374151;
+  border: none;
+  background: rgba(37, 99, 235, 0.08);
+  width: 100%;
+  padding: 6px 8px 6px 20px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.lesson-title-input:focus {
+  outline: none;
+  background: rgba(37, 99, 235, 0.15);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.lesson-item {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.lesson-item::before {
+  color: #2563eb;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.lesson-title-input:focus + .lesson-item::before {
+  opacity: 0.6;
+}
+.edit-toggle-btn {
+  background-color: #f59e0b;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.edit-toggle-btn:hover {
+  background-color: #d97706;
+}
+
+/* Giữ dấu chấm tròn ở chế độ xem */
+.lesson-item::before {
+  color: #2563eb;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.lesson-item {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* Ẩn dấu chấm khi đang chỉnh sửa (vì input đã có padding) */
+.lesson-item:has(.lesson-title-input)::before {
+  display: none;
+}
+@media (max-width: 768px) {
+  .ai-syllabus-container {
+    padding: 16px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+}
+
+/* Success Dialog */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dialog-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+.dialog-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-weight: bold;
+}
+
+.dialog-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.dialog-message {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.dialog-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.dialog-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

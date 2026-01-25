@@ -1,0 +1,257 @@
+/* =========================================
+   VARIABLES & LAYOUT
+   ========================================= */
+:root {
+  --ce-primary: #2563EB;
+  --ce-primary-hover: #1D4ED8;
+  --ce-bg-page: #F8FAFC;
+  --ce-text-main: #1E293B;
+  --ce-text-light: #64748B;
+  --ce-border: #E2E8F0;
+  --ce-danger: #EF4444;
+}
+
+.create-exam-page {
+  min-height: 100vh;
+  background-color: var(--ce-bg-page);
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.create-exam-container {
+  width: 100%;
+  max-width: 800px; /* Độ rộng tối ưu cho form */
+}
+
+/* Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--ce-text-main);
+  margin: 0 0 8px 0;
+}
+
+.page-subtitle {
+  color: var(--ce-text-light);
+  font-size: 0.95rem;
+}
+
+/* Form Card */
+.exam-form-card {
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--ce-border);
+  overflow: hidden;
+}
+
+.form-section {
+  padding: 32px;
+}
+
+.border-top {
+  border-top: 1px solid var(--ce-border);
+  background-color: #FAFAFA; /* Nền hơi xám cho phần config nâng cao */
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ce-text-main);
+  margin: 0 0 24px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================
+   FORM CONTROLS
+   ========================================= */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ce-text-main);
+  margin-bottom: 8px;
+}
+
+.form-label.required::after {
+  content: " *";
+  color: var(--ce-danger);
+}
+
+/* Đảm bảo text trong input số nằm giữa */
+.form-input.text-center {
+  text-align: center;
+}
+
+/* Nếu bạn muốn chắc chắn ẩn spinner trên mọi trình duyệt (phòng hờ) */
+.form-input::-webkit-outer-spin-button,
+.form-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Special Inputs */
+.input-with-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--ce-text-main);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.input-suffix-wrapper {
+  position: relative;
+}
+
+.input-suffix {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ce-text-light);
+  font-weight: 500;
+}
+
+/* Toggles */
+.toggles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--ce-border);
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.toggle-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ce-primary);
+  cursor: pointer;
+}
+
+.toggle-text {
+  font-size: 0.9rem;
+  color: var(--ce-text-main);
+}
+
+/* =========================================
+   ACTIONS & MODAL
+   ========================================= */
+.form-footer {
+  padding: 24px 32px;
+  background-color: white;
+  border-top: 1px solid var(--ce-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--ce-primary);
+  color: white;
+}
+.btn-primary:hover { background-color: var(--ce-primary-hover); }
+.btn-primary:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.exam-btn-secondary {
+  background-color: white;
+  border: 1px solid var(--ce-border);
+  color: var(--ce-text-main);
+}
+.exam-btn-secondary:hover { background-color: #F8FAFC; border-color: #94A3B8; }
+
+.btn-danger {
+  background-color: var(--ce-danger);
+  color: white;
+}
+.btn-danger:hover { background-color: #DC2626; }
+
+/* Simple Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-box {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-box h3 { margin: 0 0 12px 0; color: var(--ce-danger); }
+.modal-actions { margin-top: 24px; display: flex; justify-content: flex-end; gap: 12px; }
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .create-exam-page { padding: 20px 16px; }
+  .form-section { padding: 20px; }
+  .form-footer { padding: 20px; flex-direction: column-reverse; }
+  .btn { width: 100%; }
+  
+  .form-grid-2, .form-grid-3 {
+    grid-template-columns: 1fr; /* Chuyển hết về 1 cột */
+  }
+}

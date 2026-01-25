@@ -1,0 +1,88 @@
+.learning-layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--cl-bg-page);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  color: var(--cl-text-main);
+}
+
+.learning-workspace {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.status-icon.completed {
+  color: #22c55e;
+  font-size: 1rem;
+}
+
+.cls-progress-track {
+  width: 100%;
+  height: 3px;
+  background-color: #f3f4f6;
+  border-radius: 2px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.cls-progress-fill {
+  height: 100%;
+  background-color: #3b82f6; 
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.lesson-row.active {
+  background-color: #eff6ff;
+  border-left-color: #3b82f6; 
+}
+
+.lesson-row.active .lesson-name-text {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .learning-layout.sidebar-expanded .learning-viewer-area {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .learning-header.compact {
+    padding: 0 16px;
+  }
+  .course-title-compact {
+    max-width: 150px;
+    font-size: 1rem;
+  }
+  .progress-compact {
+    display: none;
+  }
+
+  .learning-sidebar {
+    width: 85%;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .learning-viewer-area {
+    padding: 16px;
+  }
+
+  .lesson-heading {
+    font-size: 1.4rem;
+  }
+
+  .file-preview-card {
+    height: 300px;
+  }
+}

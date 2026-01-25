@@ -1,0 +1,48 @@
+.course-list-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.course-item-skeleton {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #f3f4f6;
+  border-radius: 12px;
+}
+
+.course-list-skeleton.compact .course-item-skeleton {
+  padding: 10px;
+}
+
+.thumbnail-skeleton {
+  width: 96px;
+  height: 64px;
+  background: #e5e7eb;
+  border-radius: 8px;
+}
+
+.course-list-skeleton.compact .thumbnail-skeleton {
+  width: 72px;
+  height: 48px;
+}
+
+.content-skeleton {
+  flex: 1;
+}
+
+.content-skeleton .line {
+  height: 14px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.line.title {
+  width: 70%;
+}
+
+.line.subtitle {
+  width: 40%;
+}

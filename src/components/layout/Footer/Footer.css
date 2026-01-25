@@ -1,0 +1,132 @@
+.footer {
+  width: 100%;
+  min-height: 200px;
+  background: #252641;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  color: #fff;
+}
+
+.footer-mt-auto {
+  margin-top: auto;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.footer-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: opacity 0.2s;
+}
+
+.footer-logo-area:hover {
+  opacity: 0.8;
+}
+
+.footer-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer-brand-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.footer-slogan {
+  font-weight: 500;
+  text-align: center;
+  max-width: 400px;
+}
+
+.footer-subscribe {
+  text-align: center;
+}
+
+.footer-subscribe-title {
+  font-weight: 500;
+  font-size: 16px;
+  color: #b2b3cf;
+  margin-bottom: 12px;
+}
+
+.footer-subscribe-box {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-input {
+  width: 200px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #83839a;
+  border-radius: 40px;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-input::placeholder {
+  color: #83839a;
+}
+
+.footer-btn {
+  width: 100px;
+  height: 36px;
+  border-radius: 40px;
+  background: #3d5cff;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-btn:hover {
+  background: #3aa4a6;
+}
+
+/* Links */
+.footer-links {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 8px 0;
+  color: #b2b3cf;
+  font-size: 14px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #b2b3cf;
+}
+
+.footer-links a:hover {
+  color: #3d5cff;
+}
+
+.divider {
+  color: #626381;
+}
+
+.footer-copy {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #b2b3cf;
+}

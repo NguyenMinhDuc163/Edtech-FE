@@ -1,0 +1,162 @@
+.ApproveAction__container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.ApproveAction__btn {
+  padding: 8px 16px;         
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  min-width: 80px;
+  text-align: center;
+  white-space: nowrap;      
+}
+
+.ApproveAction__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ApproveAction__btn--approve {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.ApproveAction__btn--approve:hover:not(:disabled) {
+  background-color: #0d9d6e;
+  transform: translateY(-1px);
+}
+
+.ApproveAction__btn--reject {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.ApproveAction__btn--reject:hover:not(:disabled) {
+  background-color: #d13a3a;
+  transform: translateY(-1px);
+}
+
+.ApproveAction__modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.ApproveAction__modal {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ApproveAction__modalTitle {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--danger-color);
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 10px;
+}
+
+.ApproveAction__textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  resize: vertical;
+  font-size: 0.95rem;
+}
+
+.ApproveAction__modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.ApproveAction__modalBtn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.ApproveAction__modalBtn--cancel {
+  background: #e5e7eb;
+  color: #4b5563;
+}
+
+.ApproveAction__modalBtn--confirm {
+  background: var(--danger-color);
+  color: white;
+}
+
+.ApproveAction__modalBtn--confirm:disabled {
+  background: #fca5a5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .ApproveAction__container {
+    gap: 8px;
+  }
+
+  .ApproveAction__btn {
+    padding: 10px 10px;
+    font-size: 0.9rem;
+    flex: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .ApproveAction__modal {
+    margin: 0 15px;
+    padding: 18px;
+  }
+
+  .ApproveAction__modalTitle {
+    font-size: 1rem;
+  }
+
+  .ApproveAction__textarea {
+    font-size: 0.9rem;
+  }
+
+  .ApproveAction__modalActions {
+    gap: 8px;
+  }
+
+  .ApproveAction__modalBtn {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+}

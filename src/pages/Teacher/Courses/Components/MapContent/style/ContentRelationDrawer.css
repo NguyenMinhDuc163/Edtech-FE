@@ -1,0 +1,314 @@
+/* --- Overlay & Container --- */
+.crd-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 40;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.crd-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 400px;
+  background-color: #ffffff;
+  box-shadow: -10px 0 25px -5px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  animation: slideIn 0.3s ease-out;
+  max-height: 100%;
+  overflow: hidden; /* Quan trọng: để scrollbar chỉ hiện ở phần body */
+}
+
+.crd-header {
+  flex-shrink: 0; /* Không bị co lại */
+  padding: 16px 20px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: flex-start; /* Căn trên để xử lý title dài */
+  justify-content: space-between;
+  gap: 16px;
+  z-index: 10;
+}
+
+.crd-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.crd-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+  margin-top: 0.25rem;
+}
+
+.crd-close-btn {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  color: #6b7280;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crd-close-btn:hover {
+  background-color: #e5e7eb;
+  color: #ef4444;
+}
+
+/* --- Tabs --- */
+.crd-tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.crd-tab-btn {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #6b7280;
+}
+
+.crd-tab-btn:hover {
+  background-color: #f9fafb;
+}
+
+/* Active States specific colors */
+.crd-tab-btn--active-blue {
+  border-bottom-color: #2563eb;
+  color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.crd-tab-btn--active-purple {
+  border-bottom-color: #9333ea;
+  color: #9333ea;
+  background-color: #faf5ff;
+}
+
+/* --- Content Body --- */
+.crd-body {
+  flex: 1; /* Chiếm hết khoảng trống giữa header và footer */
+  overflow-y: auto; /* Scroll ở đây */
+  padding: 0; /* Reset padding */
+  position: relative;
+}
+
+.crd-loading {
+  text-align: center;
+  padding: 2.5rem 0;
+  color: #9ca3af;
+}
+
+.crd-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.crd-empty {
+  text-align: center;
+  padding: 2rem;
+  border: 2px dashed #e5e7eb;
+  border-radius: 0.5rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* List Item */
+.crd-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.crd-item:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.crd-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.crd-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.crd-dot--blue {
+  background-color: #3b82f6;
+}
+.crd-dot--purple {
+  background-color: #a855f7;
+}
+
+.crd-item-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.crd-delete-btn {
+  color: #9ca3af;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.crd-delete-btn:hover {
+  color: #ef4444;
+}
+
+.crd-footer {
+  flex-shrink: 0;
+  padding: 16px 20px;
+  background: #f8f9fa; /* Màu nền tách biệt nhẹ */
+  border-top: 1px solid #e5e7eb;
+  z-index: 10;
+}
+
+.crd-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.crd-action-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.crd-select {
+  flex: 1; /* Chiếm hết chiều ngang còn lại */
+  min-width: 0; /* CỰC KỲ QUAN TRỌNG để flex item co lại */
+
+  height: 40px;
+  padding: 0 32px 0 12px; /* Padding phải chừa chỗ cho mũi tên dropdown */
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  outline: none;
+
+  /* Cắt chữ ... nếu quá dài */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Style mặc định của select browser */
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236b7280%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 10px auto;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.crd-select:focus {
+  border-color: #3b82f6; /* Màu xanh focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.crd-add-btn {
+  width: 40px; /* Vuông vức */
+  height: 40px;
+  flex-shrink: 0; /* Không bao giờ bị co lại */
+
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.crd-add-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.crd-add-btn:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.crd-note {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.crd-tab-btn--active-orange {
+  color: #ea580c;
+  border-bottom-color: #ea580c;
+  background-color: #fff7ed;
+}
+
+.crd-dot--orange {
+  background-color: #ea580c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

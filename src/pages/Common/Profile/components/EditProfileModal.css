@@ -1,0 +1,342 @@
+/* Overlay làm mờ nền */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu đen mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001; /* Cao hơn Navbar */
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Hộp modal chính */
+.modal-content {
+  background: var(--bg-color);
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+.modal-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Phần Upload Ảnh */
+.image-upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.image-preview {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+}
+
+.upload-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--primary-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid white;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.upload-label:hover {
+  transform: scale(1.1);
+}
+
+.upload-hint {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+/* Form Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+.form-row .form-group {
+  flex: 1;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.btn-cancel {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-save {
+  padding: 10px 24px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-save:hover {
+  background: var(--primary-dark);
+}
+
+.modal-content-large {
+  max-width: 700px;
+}
+
+textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.certificates-section {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.btn-add-cert {
+  padding: 8px 16px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-add-cert:hover {
+  background: var(--primary-dark);
+}
+
+.certificate-item {
+  background: #f8f9fa;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.cert-number {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.btn-remove-cert {
+  padding: 4px 12px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.btn-remove-cert:hover {
+  background: #c82333;
+}
+
+.existing-file {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background: #e8f4f8;
+  border-radius: 6px;
+}
+
+.existing-file a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.existing-file a:hover {
+  text-decoration: underline;
+}
+
+.file-selected {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 8px;
+  background: #d1ecf1;
+  color: #0c5460;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.no-certificates {
+  text-align: center;
+  padding: 32px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.input-error {
+  border-color: #dc3545 !important;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.cert-error {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #f8d7da;
+  border-radius: 6px;
+  border: 1px solid #f5c2c7;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,264 @@
+.admin-course-page {
+  padding: 24px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+.admin-course-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 24px 32px;
+}
+
+.admin-course-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.admin-course-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.admin-course-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.admin-btn:hover {
+  transform: translateY(-1px);
+}
+
+.admin-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.admin-btn-primary:hover {
+  background-color: #1e3a8a;
+}
+
+.admin-btn-danger {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+.admin-btn-danger:hover {
+  background-color: #991b1b;
+}
+
+.admin-btn-secondary {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.admin-btn-secondary:hover {
+  background-color: #e5e7eb;
+}
+
+.admin-course-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  background-color: #f9fafb;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  gap: 4px;
+}
+
+.filter-item label {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.filter-item select,
+.filter-item input {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #111827;
+  background-color: #fff;
+}
+
+.filter-item input:focus,
+.filter-item select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.search-box {
+  flex: 1;
+  min-width: 200px;
+}
+
+.admin-course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-course-item {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.admin-course-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+.admin-course-info {
+  flex: 1;
+}
+
+.admin-course-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.admin-course-desc {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.admin-course-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 6px 20px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.admin-course-meta strong {
+  color: #111827;
+}
+
+.admin-course-status {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.admin-course-status.draft {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.admin-course-status.saved {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.admin-course-status.approved {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.admin-course-status.pending {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.admin-course-discount {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.admin-course-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.admin-course-buttons button {
+  border: none;
+  background-color: #f3f4f6;
+  color: #111827;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-course-buttons button:hover {
+  background-color: #e5e7eb;
+}
+
+.admin-course-loading,
+.admin-course-empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 40px 0;
+  font-size: 15px;
+}
+
+.admin-course-list-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.admin-course-pagination-select label {
+  font-size: 14px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-course-pagination-select select {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 4px 8px;
+  background-color: #fff;
+  color: #111827;
+  font-size: 14px;
+}

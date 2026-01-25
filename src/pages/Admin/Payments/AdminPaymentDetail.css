@@ -1,0 +1,472 @@
+.invoice-page {
+  padding: 0;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.invoice-actions-top {
+  margin-bottom: 24px;
+}
+
+.invoice-actions-top .back-btn {
+  position: static;
+  top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.invoice-actions-top .back-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.invoice-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  color: white;
+}
+
+.invoice-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.invoice-logo {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.invoice-company h1 {
+  margin: 0 0 4px 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+}
+
+.invoice-company p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.invoice-header-right {
+  text-align: right;
+}
+
+.invoice-title {
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.invoice-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.invoice-meta-item {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.meta-label {
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+.meta-value {
+  font-weight: 600;
+  color: white;
+}
+
+.invoice-status {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.invoice-status-success {
+  background: rgba(16, 185, 129, 0.2);
+  color: #dcfce7;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.invoice-status-failed {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fee2e2;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.invoice-status-pending {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fef3c7;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.invoice-divider {
+  height: 2px;
+  background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+.invoice-body {
+  padding: 40px;
+}
+
+.invoice-section {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.invoice-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.invoice-section .section-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 20px 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.info-label {
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 500;
+  min-width: 140px;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 400;
+  flex: 1;
+}
+
+.info-value.price {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.course-detail {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.course-thumbnail-large {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.course-detail-info {
+  flex: 1;
+}
+
+.course-title-large {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.course-meta-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.payment-details {
+  background: #f9fafb;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.invoice-table {
+  width: 100%;
+  margin-bottom: 24px;
+  border-collapse: collapse;
+}
+
+.invoice-table thead {
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.invoice-table th {
+  padding: 12px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.invoice-table th.text-right,
+.invoice-table td.text-right {
+  text-align: right;
+}
+
+.invoice-table tbody td {
+  padding: 16px 12px;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.invoice-table tfoot {
+  border-top: 2px solid #e5e7eb;
+}
+
+.invoice-table tfoot .total-row td {
+  padding: 16px 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.total-amount {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.payment-method-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.refund-section {
+  background: #fffbeb;
+  padding: 24px;
+  border-radius: 12px;
+  border: 2px solid #fde047;
+}
+
+.refunds-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.refund-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.refund-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.refund-item-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.refund-id {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.refund-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.refund-status-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.refund-status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.refund-status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.refund-amount {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ef4444;
+}
+
+.refund-item-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.refund-item-body .info-row.reject-reason {
+  background: #fee2e2;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #ef4444;
+}
+
+.invoice-footer {
+  background: #f9fafb;
+  padding: 32px 40px;
+  text-align: center;
+  border-top: 2px solid #e5e7eb;
+}
+
+.invoice-footer p {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.footer-note {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .invoice-header {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .invoice-header-right {
+    text-align: left;
+    width: 100%;
+  }
+
+  .invoice-meta {
+    align-items: flex-start;
+  }
+
+  .invoice-meta-item {
+    justify-content: flex-start;
+  }
+
+  .invoice-body {
+    padding: 24px;
+  }
+
+  .course-detail {
+    flex-direction: column;
+  }
+
+  .course-thumbnail-large {
+    width: 100%;
+    height: 180px;
+  }
+
+  .invoice-footer {
+    padding: 24px;
+  }
+}
+
+@media print {
+  .invoice-page {
+    background: white;
+  }
+
+  .invoice-actions-top {
+    display: none;
+  }
+
+  .invoice-container {
+    box-shadow: none;
+    max-width: 100%;
+  }
+}

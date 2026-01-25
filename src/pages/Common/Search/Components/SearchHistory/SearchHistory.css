@@ -1,0 +1,121 @@
+.search-container {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-history-dropdown {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.history-header {
+  padding: 8px 12px;
+  font-weight: bold;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  background-color: #fafafa;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.history-item:hover {
+  background-color: #f2f2f2;
+}
+
+.history-icon {
+  color: #999;
+}
+
+.no-history {
+  text-align: center;
+  padding: 12px;
+  color: #888;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #ff4d4d;
+}
+
+.no-history {
+  text-align: center;
+  padding: 12px;
+  color: #888;
+}
+
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.15s;
+}
+
+.search-item:hover {
+  background: #f1f1f1;
+}
+
+.history-icon {
+  color: #888;
+  font-size: 14px;
+}
+
+.no-history {
+  padding: 10px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}

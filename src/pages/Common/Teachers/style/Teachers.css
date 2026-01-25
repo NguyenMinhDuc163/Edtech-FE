@@ -1,0 +1,343 @@
+.teachers-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.teachers-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.teachers-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teachers-hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.teachers-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  width: 100%;
+}
+
+.teachers-loading,
+.teachers-empty {
+  text-align: center;
+  padding: 60px 24px;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+.teacher-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.teacher-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.teacher-card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.teacher-avatar {
+  flex-shrink: 0;
+}
+
+.teacher-avatar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.teacher-basic-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.teacher-basic-info h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.teacher-specialty {
+  font-size: 1rem;
+  color: #667eea;
+  font-weight: 600;
+  margin: 0;
+  background-color: #eef2ff;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+.teacher-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.teacher-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.teacher-contact-item svg {
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.teacher-certificates {
+  border-top: 2px solid #f3f4f6;
+  padding-top: 20px;
+}
+
+.certificates-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.certificates-header svg {
+  color: #f59e0b;
+  flex-shrink: 0;
+}
+
+.certificates-header h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.certificates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.certificate-item {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.certificate-item:hover {
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.certificate-header-clickable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  cursor: pointer;
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease;
+}
+
+.certificate-header-clickable:hover {
+  background-color: #f3f4f6;
+}
+
+.certificate-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.certificate-icon {
+  color: #f59e0b;
+  flex-shrink: 0;
+}
+
+.certificate-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.certificate-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #667eea;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.certificate-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.certificate-details {
+  padding: 16px;
+  background-color: #fffbeb;
+  border-top: 1px solid #fde68a;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.certificate-description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+}
+
+.certificate-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.certificate-meta-item {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.certificate-meta-item strong {
+  color: #111827;
+  margin-right: 6px;
+}
+
+.certificate-view-btn {
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-view-btn:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .teachers-container {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 968px) {
+  .teachers-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teachers-hero {
+    padding: 40px 20px;
+  }
+
+  .teachers-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .teachers-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .teachers-container {
+    padding: 40px 20px;
+  }
+
+  .teacher-card {
+    padding: 24px;
+  }
+
+  .teacher-card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .teacher-avatar img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .teacher-contact {
+    align-items: flex-start;
+  }
+
+  .certificate-view-btn {
+    width: 100%;
+  }
+}

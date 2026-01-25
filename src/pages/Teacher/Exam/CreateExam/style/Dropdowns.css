@@ -1,0 +1,69 @@
+/* Wrapper để định vị icon mũi tên */
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Style chính cho thẻ Select */
+.custom-select {
+  appearance: none; /* Ẩn giao diện mặc định của trình duyệt */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  width: 100%;
+  padding: 10px 36px 10px 14px; /* Padding phải rộng hơn để chừa chỗ cho icon */
+  background-color: #fff;
+  border: 1px solid var(--ce-border, #E2E8F0);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--ce-text-main, #1E293B);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  line-height: 1.5;
+}
+
+/* Hiệu ứng Focus đồng bộ với Input */
+.custom-select:focus {
+  outline: none;
+  border-color: var(--ce-primary, #2563EB);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Hiệu ứng Hover */
+.custom-select:hover {
+  border-color: #CBD5E1;
+}
+
+/* Tạo mũi tên tùy chỉnh bằng CSS thuần */
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  pointer-events: none; /* Để click xuyên qua icon vào select */
+}
+
+/* Vẽ mũi tên bằng border (hoặc có thể dùng SVG background) */
+.select-arrow::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #64748B;
+  border-bottom: 2px solid #64748B;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+  margin-top: -4px;
+}
+
+/* Khi focus thì mũi tên đổi màu xanh */
+.custom-select:focus + .select-arrow::after {
+  border-color: var(--ce-primary, #2563EB);
+}
+
+/* Style cho option placeholder */
+.placeholder-option {
+  color: #9CA3AF;
+}

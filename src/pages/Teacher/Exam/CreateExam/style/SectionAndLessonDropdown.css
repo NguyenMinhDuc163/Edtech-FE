@@ -1,0 +1,67 @@
+.section-lesson-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.dropdown-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dropdown-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.dropdown-select {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  color: #1e293b;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.dropdown-select:disabled {
+  background-color: #f9fafb;
+  cursor: not-allowed;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .section-lesson-dropdown {
+    gap: 0.8rem;
+  }
+
+  .dropdown-select {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .dropdown-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-lesson-dropdown {
+    gap: 0.7rem;
+  }
+
+  .dropdown-select {
+    padding: 0.45rem 0.6rem;
+  }
+}

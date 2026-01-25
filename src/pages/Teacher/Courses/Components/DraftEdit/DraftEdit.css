@@ -1,0 +1,320 @@
+/* src/pages/Teacher/Courses/Components/DraftEdit/DraftEdit.css */
+.draft-edit-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 100px 20px 120px;
+}
+
+.draft-edit-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header cố định */
+.draft-header {
+  position: sticky;
+  top: 80px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  z-index: 40;
+  backdrop-filter: blur(10px);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background: #e2e8f0;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.page-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.save-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.save-status.saving   { background: #d1fae5; color: #166534; }
+.save-status.unsaved  { background: #fff7ed; color: #ea580c; }
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Admin Comment */
+.admin-feedback {
+  background: #fef2f2;
+  border: 2px solid #f87171;
+  border-left: 6px solid #dc2626;
+  border-radius: 14px;
+  padding: 20px;
+  margin: 24px 0;
+}
+
+.admin-feedback h3 {
+  color: #991b1b;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-feedback p {
+  color: #991b1b;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Section Card - Nhỏ gọn hơn */
+.section-card {
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: all 0.3s;
+}
+
+.section-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+
+.section-detail-header {
+  background: linear-gradient(135deg, #2563eb, #3b82f6); 
+  padding: 20px 28px;
+  border-radius: 16px 16px 0 0; 
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title-input {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 6px 0;
+}
+
+.section-title-input::placeholder {
+  color: rgba(255,255,255,0.75);
+}
+
+.section-body {
+  padding: 28px;
+}
+
+/* Textarea mô tả chương */
+.section-description {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e0e7ff;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: #f8faff;
+  resize: none;
+  transition: all 0.3s;
+}
+
+.section-description:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.15);
+  background: white;
+}
+
+/* Lesson Card - Gọn đẹp */
+.lesson-card {
+  background: #f0f9ff;
+  border: 2px solid #bae6fd;
+  border-radius: 14px;
+  padding: 20px 50px 20px 20px;
+  margin-top: 20px;
+  overflow: hidden;           
+  position: relative;
+}
+
+.lesson-title-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #93c5fd;
+  border-radius: 10px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e40af;
+  background: white;
+  margin-bottom: 12px;
+}
+
+.lesson-title-input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.2);
+}
+
+.lesson-description {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #bfdbfe;
+  border-radius: 10px;
+  font-size: 0.98rem;
+  background: white;
+  resize: none;
+  height: 80px;
+}
+
+.lesson-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.preview-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.preview-toggle input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2563eb;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: #64748b;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Footer */
+.page-footer {
+  margin-top: 60px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  padding: 20px;
+  border-top: 1px dashed #cbd5e1;
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+  transition: all 0.3s;
+}
+
+.save-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .draft-edit-container { padding: 120px 16px; }
+  .draft-header { top: 70px; padding: 16px; }
+  .header-content { flex-direction: column; text-align: center; }
+  .submit-btn { width: 100%; justify-content: center; }
+  .section-header { padding: 18px 20px; }
+  .section-title-input { font-size: 1.6rem; }
+  .section-body { padding: 20px; }
+}

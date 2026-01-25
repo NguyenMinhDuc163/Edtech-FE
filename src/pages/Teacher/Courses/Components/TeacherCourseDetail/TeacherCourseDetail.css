@@ -1,0 +1,550 @@
+.course-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 60px;
+  box-sizing: border-box;
+  min-height: calc(100vh - 160px);
+}
+
+/* === COURSE HEADER === */
+.course-header {
+  display: flex;
+  margin-top: 100px;
+  gap: 24px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.thumbnail {
+  width: 260px;
+  height: auto;
+  border-radius: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.course-infotc h2 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.category {
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+.meta {
+  color: #555;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* === Giá & Giảm giá === */
+.price-info {
+  margin: 16px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;        
+  align-items: center;
+  flex-wrap: nowrap;      
+  gap: 8px;              
+  white-space: nowrap
+}
+
+
+.original-price {
+  text-decoration: line-through;
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.discounted-price {
+  color: #dc2626;
+  margin-right: 8px;
+}
+
+.discount-badge {
+  background: #dc2626;
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* === Ngày tạo === */
+.created-at {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+/* === Mô tả ngắn === */
+.short-desc {
+  color: #475569;
+  font-size: 1rem;
+  margin: 8px 0 16px;
+  line-height: 1.5;
+}
+/* === SECTION LIST === */
+.course-sections {
+  margin-top: 50px;
+}
+
+.course-sections h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.section-block {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.section-block:hover {
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.15);
+}
+
+.section-header {
+  background: #f8faff;
+  padding: 10px 16px;
+  margin: -16px -20px 8px -20px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+.section-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.section-desc {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: left;
+}
+
+
+.section-count {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+/* === Add Section Button === */
+.add-section-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:5px ;
+  gap: 8px;
+  background: linear-gradient(135deg, #4f9cff, #007bff);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.25);
+  margin-top: 20px;
+}
+
+.add-section-btn:hover {
+  background: linear-gradient(135deg, #3a8cff, #0069d9);
+  box-shadow: 0 5px 14px rgba(0, 123, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* === POPUP === */
+.add-section-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 320px;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.add-section-popup input,
+.add-section-popup textarea {
+  color: #000 !important; 
+  font-size: 14px !important;
+}
+
+.add-section-popup input::placeholder,
+.add-section-popup textarea::placeholder {
+  color: #000 !important;
+  font-size: 14px !important;
+}
+
+.visibility-toggle {
+  background: none;
+  border: 2px solid;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.visibility-toggle.public {
+  border-color: #28a745;
+  color: #28a745;
+  background: rgba(40, 167, 69, 0.1);
+}
+
+.visibility-toggle.private {
+  border-color: #dc3545;
+  color: #dc3545;
+  background: rgba(220, 53, 69, 0.1);
+}
+
+.visibility-toggle:hover:not(.disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.visibility-toggle.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Overlay nền tối */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.25s ease;
+}
+
+/* Box modal */
+.modal-box {
+  background: white;
+  width: 380px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 12px;
+  animation: scaleIn 0.25s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Title */
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* Message */
+.modal-message {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+/* Button group */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Buttons */
+.modal-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+/* Cancel button */
+.modal-btn.cancel {
+  background: #ddd;
+}
+
+.modal-btn.cancel:hover {
+  background: #ccc;
+}
+
+/* Confirm button */
+.modal-btn.confirm {
+  background: #007bff;
+  color: white;
+}
+
+.modal-btn.confirm:hover {
+  background: #0066d9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lesson-list {
+  position: relative; 
+  margin-top: 12px;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.lesson-item {
+  background: #f0f9ff;
+  border-left: 4px solid #3b82f6;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #1e3a8a;
+}
+
+.no-lesson {
+  color: #6b7280;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+.edit-section-btn {
+  background-color: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.edit-section-btn:hover {
+  background-color: #1d4ed8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.add-section-popup input {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.add-section-popup button {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-section-popup .cancel-btn {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.add-section-popup button:not(.cancel-btn) {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Floating Submit Button */
+.floating-submit-btn {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.floating-submit-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4);
+}
+
+.floating-submit-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.floating-submit-btn .spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.section-title-input,
+.section-desc-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.section-desc-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10000;
+  animation: slideIn 0.4s ease-out;
+  min-width: 300px;
+}
+
+.notification.success {
+  background: #10b981;
+}
+
+.notification.error {
+  background: #ef4444;
+}
+
+.notification.warning {
+  background: #f59e0b;
+}
+
+.notification .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0 4px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .course-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .thumbnail {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .section-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .add-section-popup {
+    width: 90%;
+  }
+}

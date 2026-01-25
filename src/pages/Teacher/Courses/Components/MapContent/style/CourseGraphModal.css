@@ -1,0 +1,173 @@
+.cgm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: cgmFadeIn 0.2s ease-out;
+}
+
+.cgm-container {
+  width: 95%;
+  height: 90%;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.cgm-header {
+  height: 70px;
+  padding: 0 24px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  z-index: 10;
+}
+
+.cgm-icon-box {
+  width: 40px;
+  height: 40px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cgm-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.cgm-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.cgm-close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.cgm-close-btn:hover {
+  background: #f3f4f6;
+  color: #ef4444;
+}
+
+/* Body chứa React Flow */
+.cgm-body {
+  flex: 1;
+  background-color: #f9fafb;
+  position: relative;
+}
+
+/* Tùy chỉnh Node mặc định của React Flow */
+.cgm-node {
+  background: #fff !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  padding: 10px 15px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+  text-align: center !important;
+  width: 250px;
+  transition: all 0.2s;
+}
+
+.cgm-node:hover {
+  border-color: #2563eb !important;
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1) !important;
+  transform: translateY(-2px);
+}
+
+/* Handle (Điểm nối dây) - Ẩn đi để nhìn cho sạch, ReactFlow tự xử lý */
+.react-flow__handle {
+  opacity: 0;
+}
+
+/* Legend (Chú thích) */
+.cgm-legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.cgm-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cgm-line {
+  display: block;
+  width: 30px;
+  height: 2px;
+}
+
+.cgm-line.blue {
+  background: #2563eb;
+}
+.cgm-line.purple {
+  background: #9333ea;
+}
+
+.cgm-line.orange {
+  background: #ea580c;
+}
+
+.cgm-line.dashed {
+  border-top: 2px dashed #9333ea;
+  background: transparent;
+  height: 0;
+}
+
+@keyframes cgmFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

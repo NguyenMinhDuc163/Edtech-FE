@@ -1,0 +1,116 @@
+.admin-kpi-section {
+  margin-bottom: 32px;
+}
+
+.admin-section-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+  letter-spacing: -0.025em;
+}
+
+.admin-kpi-grid, .kpi-grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.kpi-card {
+  background-color: #ffffff;
+  border: 1px solid #E5E7EB; 
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  border-color: #D1D5DB;
+}
+
+.kpi-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  font-size: 24px; 
+}
+
+.kpi-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.kpi-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+}
+
+.kpi-label {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6B7280; 
+  margin: 0 0 6px 0;
+}
+
+.kpi-value {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kpi-desc {
+  font-size: 0.85rem;
+  color: #9CA3AF;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.kpi-variant-blue .kpi-icon-wrapper {
+  background-color: #EFF6FF; 
+  color: #3B82F6;
+}
+
+.kpi-variant-green .kpi-icon-wrapper {
+  background-color: #ECFDF5; 
+  color: #10B981; 
+}
+
+.kpi-variant-orange .kpi-icon-wrapper {
+  background-color: #FFFBEB;
+  color: #F59E0B; 
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 640px) {
+  .admin-kpi-grid, .kpi-grid {
+    grid-template-columns: 1fr; 
+    gap: 16px;
+  }
+  
+  .kpi-card {
+    padding: 20px;
+  }
+  
+  .kpi-value {
+    font-size: 1.5rem;
+  }
+}

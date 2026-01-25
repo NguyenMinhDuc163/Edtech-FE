@@ -1,0 +1,228 @@
+.ai-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ai-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.ai-welcome h2 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.ai-messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-behavior: smooth;
+  min-height: 0;
+  background-color: #ffffff;
+}
+
+.ai-loader {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+  padding: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+.ai-message-row {
+  gap: 10px;
+  padding: 0 12px;
+  max-width: 100%;
+}
+
+.ai-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.ai-message-row.assistant .ai-avatar {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.ai-message-row.user .ai-avatar {
+  background-color: #9ca3af;
+  color: #fff;
+}
+
+.ai-bubble {
+  font-size: 13.5px;
+  line-height: 1.5;
+  padding-top: 2px;
+}
+
+.ai-message-row.user .ai-bubble {
+  font-weight: 500;
+  color: #374151;
+}
+
+.ai-bubble.typing span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #9ca3af;
+  border-radius: 50%;
+  margin-right: 4px;
+  animation: typing 1.4s infinite ease-in-out both;
+}
+
+.ai-bubble.typing span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.ai-bubble.typing span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.ai-input-wrapper {
+  padding: 10px 12px;
+  border-top: 1px solid var(--border-color);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.ai-input-box {
+  background: #f3f4f6;
+  border-radius: 24px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  transition: all 0.2s;
+  min-height: 40px;
+  border: 1.5px solid transparent;
+}
+
+.ai-input-box:focus-within {
+  background: #fff;
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+.ai-input-box textarea {
+  flex: 1;
+  min-width: 0;
+
+  height: 24px;
+  min-height: 24px;
+  max-height: 120px;
+  overflow-y: auto;
+
+  border: none;
+  background: transparent;
+  outline: none;
+  resize: none;
+
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.ai-send-btn {
+  width: 28px;
+  height: 28px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  padding-left: 2px;
+  margin-bottom: 2px;
+}
+
+.ai-send-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.ai-send-btn:disabled {
+  background: #d1d5db;
+  cursor: default;
+  transform: none;
+}
+
+.ai-disclaimer {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+.ai-scroll-bottom-btn {
+  position: absolute;
+  bottom: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 32px;
+  height: 32px;
+
+  background-color: #fff;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+
+  transition: all 0.2s;
+  animation: bounceIn 0.3s;
+}
+
+.ai-scroll-bottom-btn:hover {
+  background-color: var(--bg-secondary);
+  color: var(--primary-color);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateX(-50%) translateY(-2px);
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-input-wrapper {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+}

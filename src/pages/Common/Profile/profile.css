@@ -1,0 +1,259 @@
+.profile-page {
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  padding: 40px 20px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 1000px;
+  align-items: start;
+}
+
+.profile-sidebar {
+  background: var(--bg-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: center;
+  padding: 32px 24px;
+  position: sticky;
+  top: 100px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.role-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+}
+
+.role-badge.teacher {
+  background-color: #3d5cff;
+}
+.role-badge.student {
+  background-color: #00b894;
+}
+.role-badge.admin {
+  background-color: #d63031;
+}
+
+.display-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 4px 0;
+}
+
+.username {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 24px 0;
+}
+
+.sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-edit,
+.btn-logout {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-edit {
+  background-color: var(--primary-color);
+  color: white;
+}
+.btn-edit:hover {
+  background-color: #2a40b8;
+  transform: translateY(-1px);
+}
+
+.btn-logout {
+  background-color: #fff0f1;
+  color: #ff4757;
+}
+.btn-logout:hover {
+  background-color: #ffe0e3;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-section {
+  background: var(--bg-color);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-item label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-item .value {
+  font-size: 16px;
+  color: var(--text-main);
+  font-weight: 500;
+  padding: 10px 14px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.certificates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.certificate-card {
+  background: #f8f9fa;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.certificate-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cert-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.cert-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cert-detail {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.cert-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 100px;
+}
+
+.cert-detail span:not(.cert-label) {
+  color: var(--text-main);
+}
+
+.cert-file-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.cert-file-link:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-sidebar {
+    position: static;
+    padding: 24px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-section {
+    padding: 20px;
+  }
+}

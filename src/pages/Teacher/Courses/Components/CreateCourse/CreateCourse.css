@@ -1,0 +1,155 @@
+.create-course-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9fb;
+  box-sizing: border-box;
+}
+
+.create-course-container {
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+  box-sizing: border-box;
+}
+
+/* Heading */
+.create-course-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #252641;
+  margin: 0;
+}
+
+/* Form */
+.create-course-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Label */
+.create-course-form label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  color: #333;
+}
+
+/* Input & textarea & select */
+.create-course-form input,
+.create-course-form textarea,
+.create-course-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.create-course-form input:focus,
+.create-course-form textarea:focus,
+.create-course-form select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79,70,229,0.2);
+}
+
+/* Nút submit */
+.submit-btn {
+  padding: 12px 0;
+  background-color: #4f46e5;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #4338ca;
+}
+
+.file-upload-wrapper {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-upload-label {
+  cursor: pointer;
+}
+
+.file-upload-btn {
+  background: #f0f2f5;
+  color: #333;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px dashed #ccc;
+  display: inline-block;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.file-upload-btn:hover {
+  background: #e4e6eb;
+  border-color: #0066ff;
+  color: #0066ff;
+}
+
+.file-remove-btn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.file-remove-btn:hover {
+  background: #cc0000;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .create-course-page {
+    padding: 100px 10px;
+  }
+
+  .create-course-container {
+    padding: 25px 15px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .create-course-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .create-course-form input,
+  .create-course-form textarea,
+  .create-course-form select {
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+}

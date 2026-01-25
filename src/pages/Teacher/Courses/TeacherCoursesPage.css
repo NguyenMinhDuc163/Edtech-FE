@@ -1,0 +1,112 @@
+.teacher-course-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px;
+  box-sizing: border-box;
+  background-color: #f9f9fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teacher-header {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.teacher-header h2 {
+  font-size: 1.8rem;
+  color: #252641;
+  margin: 0;
+}
+.ai-syllabus-btn {
+  padding: 8px 14px;
+  border: 1px solid #2563eb;
+  background-color: #eef2ff;
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ai-syllabus-btn:hover {
+  background-color: #e0e7ff;
+}
+
+/* Container cho 2 nút */
+.header-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Nút Create Course */
+.create-course-btn {
+  background-color: #4f46e5;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 130px;
+  white-space: nowrap;
+}
+
+.create-course-btn:hover {
+  background-color: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.3);
+}
+
+/* NÚT MỚI: Pending Changes */
+.pending-changes-btn {
+  background-color: #f59e0b;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  white-space: nowrap;
+}
+
+.pending-changes-btn:hover {
+  background-color: #d97706;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(245, 158, 11, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .teacher-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .teacher-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .create-course-btn,
+  .pending-changes-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 12px;
+  }
+}

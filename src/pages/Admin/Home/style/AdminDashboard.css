@@ -1,0 +1,106 @@
+.dashboard-container {
+  padding: 32px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 24px;
+  letter-spacing: -0.025em;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #3d5cff;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.loading-spinner.full-height {
+  height: 80vh;
+}
+
+.spin-icon {
+  animation: spin 1s linear infinite;
+  font-size: 1.5rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.section-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+  color: #3d5cff;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.admin-no-data {
+  text-align: center;
+  padding: 60px;
+  color: #64748b;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px dashed #e2e8f0;
+  font-size: 1rem;
+}
+
+.exam-stats-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.error-message {
+  padding: 24px;
+  background-color: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 8px;
+  color: #991b1b;
+  margin-bottom: 24px;
+}
+
+.error-message h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+
+  .dashboard-header {
+    font-size: 1.5rem;
+  }
+}

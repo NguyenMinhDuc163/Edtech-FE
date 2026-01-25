@@ -1,0 +1,21 @@
+.courses-page {
+  padding: 60px 120px;
+  color: #252641;
+}
+.courses-wrapper {
+  transform: scale(0.85); 
+  transform-origin: top center;
+  margin: 0 auto;
+}
+.recommended-header{
+  font-size: 40px;
+  font-weight: 600;
+  margin: 8px 0;
+  color: #252641;
+}
+.courses-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #252641;
+  margin-bottom: 20px;
+}

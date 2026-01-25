@@ -1,0 +1,72 @@
+.cl-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+  backdrop-filter: blur(4px); 
+  animation: fadeIn 0.2s ease-out;
+}
+
+.cl-modal-container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px; 
+  max-height: 85vh;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+.cl-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.cl-modal-close:hover {
+  background: #ff4d4f;
+  color: white;
+}
+
+.cl-modal-body {
+  padding: 20px;
+  overflow-y: auto; 
+}
+
+.cl-modal-loading {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

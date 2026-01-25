@@ -1,0 +1,75 @@
+.admin-home-container {
+  display: flex;
+  height: 100vh;
+  background: #f5f7fa;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: #1c2434;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.admin-sidebar-header {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffbf00;
+}
+
+.admin-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: #ddd;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.admin-menu-item:hover {
+  background-color: #2e384d;
+}
+
+.admin-menu-item.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.admin-sidebar-footer {
+  padding: 20px;
+}
+
+.admin-logout-btn {
+  width: 100%;
+  background-color: #ef4444;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.admin-logout-btn:hover {
+  background-color: #dc2626;
+}
+
+.admin-main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}

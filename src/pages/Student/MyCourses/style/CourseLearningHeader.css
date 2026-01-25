@@ -1,0 +1,195 @@
+.learning-header.compact {
+  height: 76px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-back-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.1rem;
+}
+
+.btn-back-circle:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.course-title-compact {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  max-width: 450px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.progress-compact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  min-width: 36px;
+  color: #ffffff;
+}
+
+.progress-track {
+  width: 140px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4ade80;
+  border-radius: 4px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-actions-divider {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0 4px;
+}
+
+.btn-header-action {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  border-radius: 8px;
+}
+
+.btn-header-action:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-header-action.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.btn-toggle-sidebar {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  border-radius: 8px;
+}
+
+.btn-toggle-sidebar:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cl-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e5e7eb; /* Viền nhẹ */
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cl-action-btn:hover {
+  background-color: #f3f4f6;
+  color: var(--primary-color); /* Màu xanh chủ đạo */
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .learning-header.compact {
+    height: 64px;
+    padding: 0 16px;
+  }
+
+  .course-title-compact {
+    font-size: 1rem;
+    max-width: 200px;
+  }
+
+  .progress-compact {
+    display: none;
+  }
+
+  .header-actions-divider {
+    display: none;
+  }
+
+  .btn-header-action {
+    font-size: 1.1rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  .cl-btn-text {
+    display: none;
+  }
+
+  .cl-action-btn {
+    padding: 8px;
+    border: none;
+  }
+
+  .cl-action-btn:hover {
+    background-color: #f3f4f6;
+  }
+}

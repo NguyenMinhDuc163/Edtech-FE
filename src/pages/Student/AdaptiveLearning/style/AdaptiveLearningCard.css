@@ -1,0 +1,183 @@
+.adaptive-card {
+  --border-next: #a7f3d0;
+  --border-review: #bfdbfe;
+  --c-remedial: #d97706;
+  --border-remedial: #fde68a;
+}
+
+.adaptive-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+  border-left: 4px solid #cbd5e1;
+}
+
+.adaptive-card.variant-next {
+  background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+  border-color: var(--border-next);
+  border-left-color: var(--success-color);
+}
+
+.adaptive-card.variant-review {
+  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+  border-color: var(--border-review);
+  border-left-color: var(--primary-color);
+}
+
+.adaptive-card.variant-remedial {
+  background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+  border-color: var(--border-remedial);
+  border-left-color: var(--c-remedial);
+}
+
+.alc-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.variant-next .alc-top-badge {
+  color: var(--success-color);
+  border: 1px solid var(--border-next);
+}
+.variant-review .alc-top-badge {
+  color: var(--primary-color);
+  border: 1px solid var(--border-review);
+}
+.variant-remedial .alc-top-badge {
+  color: var(--c-remedial);
+  border: 1px solid var(--border-remedial);
+}
+
+.alc-insight-box {
+  position: relative;
+  padding: 0 0 16px 0;
+  margin-bottom: 16px;
+}
+
+.alc-reason-text {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  padding-left: 12px;
+}
+
+.alc-reason-text strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.alc-lesson-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.alc-lesson-card:hover {
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.variant-next .alc-lesson-card:hover {
+  border-color: var(--success-color);
+}
+.variant-review .alc-lesson-card:hover {
+  border-color: var(--primary-color);
+}
+.variant-remedial .alc-lesson-card:hover {
+  border-color: var(--c-remedial);
+}
+
+.alc-lesson-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.alc-files-mini-list {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.alc-mini-file {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 6px;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alc-file-icon {
+  width: 14px;
+  height: 14px;
+}
+.alc-file-icon.video {
+  color: #3b82f6;
+}
+.alc-file-icon.doc {
+  color: #f97316;
+}
+
+.alc-lesson-cta {
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  transition: color 0.2s;
+}
+
+.alc-lesson-card:hover .alc-lesson-cta {
+  color: inherit;
+}
+
+.variant-next .alc-lesson-card:hover .alc-lesson-cta {
+  color: var(--success-color);
+}
+.variant-review .alc-lesson-card:hover .alc-lesson-cta {
+  color: var(--primary-color);
+}
+.variant-remedial .alc-lesson-card:hover .alc-lesson-cta {
+  color: var(--c-remedial);
+}
+
+@media (max-width: 640px) {
+  .adaptive-card {
+    padding: 16px;
+  }
+}

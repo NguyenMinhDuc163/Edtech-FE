@@ -1,0 +1,380 @@
+.invoice-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px 40px 20px;
+  min-height: calc(100vh - 80px);
+}
+
+.invoice-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.back-btn,
+.print-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-btn {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.back-btn:hover {
+  background: #e0e0e0;
+}
+
+.print-btn {
+  background: #3d5cff;
+  color: white;
+}
+
+.print-btn:hover {
+  background: #2a40b8;
+}
+
+.invoice-paper {
+  background: white;
+  padding: 48px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px;
+  background: linear-gradient(135deg, #3d5cff 0%, #5b7cff 100%);
+  border-radius: 8px 8px 0 0;
+  margin: -48px -48px 32px -48px;
+}
+
+.company-info h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.company-info p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.invoice-title {
+  text-align: right;
+}
+
+.invoice-title h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.invoice-number,
+.invoice-date {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 4px 0;
+}
+
+.invoice-section {
+  margin-bottom: 32px;
+}
+
+.invoice-section h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: #3d5cff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3d5cff;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 600;
+  text-align: right;
+}
+
+.info-row .status-badge {
+  margin-left: auto;
+  margin-right: -12px;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.invoice-table thead {
+  background: #f8f9fa;
+}
+
+.invoice-table th {
+  padding: 12px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.invoice-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.invoice-table .text-right {
+  text-align: right;
+}
+
+.invoice-table .text-center {
+  text-align: center;
+}
+
+.invoice-table tfoot td {
+  padding: 16px 12px;
+  font-size: 16px;
+  border-top: 2px solid #333;
+  border-bottom: none;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-badge.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.pending {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.status-badge.failed {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.refund-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.refund-item {
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.refund-item:last-child {
+  margin-bottom: 0;
+}
+
+.refund-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.refund-status.pend {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.refund-status.approved {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.refund-status.rejected {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.refund-status.completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.invoice-footer {
+  text-align: center;
+  padding-top: 32px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 32px;
+}
+
+.invoice-footer p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.invoice-footer .note {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+
+.refund-action-section {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.refund-request-btn {
+  padding: 14px 32px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refund-request-btn:hover:not(:disabled) {
+  background: #f57c00;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+.refund-request-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.invoice-loading,
+.invoice-error {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+.invoice-error {
+  color: #d32f2f;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .invoice-container {
+    padding: 0;
+  }
+
+  .invoice-paper {
+    box-shadow: none;
+    border: none;
+    padding: 20px;
+  }
+
+  .invoice-header {
+    margin: 0 0 32px 0;
+    border-radius: 0;
+    page-break-inside: avoid;
+  }
+
+  body {
+    background: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .invoice-paper {
+    padding: 24px 16px;
+  }
+
+  .invoice-header {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .invoice-title {
+    text-align: left;
+  }
+
+  .company-info h1 {
+    font-size: 24px;
+  }
+
+  .invoice-title h2 {
+    font-size: 20px;
+  }
+
+  .invoice-table {
+    font-size: 12px;
+  }
+
+  .invoice-table th,
+  .invoice-table td {
+    padding: 8px 4px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .info-value {
+    text-align: left;
+  }
+
+  .invoice-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .back-btn,
+  .print-btn {
+    width: 100%;
+  }
+}

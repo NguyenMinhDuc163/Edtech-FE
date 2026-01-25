@@ -1,0 +1,351 @@
+/* Hero Section */
+.hero-section {
+  background-color: #3D5CFF;
+  min-height: 95vh; 
+  width: 100%;
+  clip-path: ellipse(120% 100% at 50% 0%);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0 8%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Left */
+.hero-left {
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.hero-left h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-left .highlight {
+  color: #facc15;
+}
+
+.hero-left p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  max-width: clamp(20rem, 50vw, 25rem);
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: clamp(0.75rem, 1vw, 1rem);
+  flex-wrap: wrap;
+}
+
+.btn-join {
+  background: white;
+  color: #3D5CFF;
+  padding: clamp(0.6rem, 1vw, 0.75rem) clamp(1.2rem, 2vw, 1.5rem);
+  border-radius: clamp(0.4rem, 0.8vw, 0.5rem);
+  font-weight: 600;
+  border: none;
+}
+
+.btn-watch {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.4rem, 0.8vw, 0.5rem);
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.play-circle {
+  width: clamp(1.5rem, 3vw, 2rem);
+  height: clamp(1.5rem, 3vw, 2rem);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: flex-end;
+  overflow: visible;
+}
+
+.teacher-img {
+  height: clamp(60vh, 80vw, 80vh);
+  object-fit: contain;
+  align-self: flex-end;
+  margin-bottom: -0.25rem;
+  transition: transform 0.25s ease;
+}
+
+/* Floating Cards */
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: clamp(0.5rem, 1vw, 0.75rem);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(0.75rem, 1.5vw, 1.25rem);
+  position: absolute;
+  width: auto;
+  min-width: clamp(8rem, 15vw, 10rem);
+  transition: transform 0.3s ease;
+}
+
+.card-1 {
+  top: 45%;
+  left: 0;
+  transform: translate(-60%, -40%);
+}
+.card-2 {
+  bottom: 10%;
+  right: 0;
+  transform: translate(40%, 10%);
+}
+.card-3 {
+  top: 80%;
+  left: 5%;
+  transform: translate(-20%, -20%);
+}
+.card-4 {
+  top: 30%;
+  right: 0;
+  transform: translate(35%, -10%);
+}
+
+.card-content {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(0.25rem, 0.5vw, 0.3125rem);
+}
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: clamp(0.4rem, 0.8vw, 0.5rem);
+  padding: clamp(0.4rem, 0.8vw, 0.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-number {
+  font-weight: bold;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  margin: 0;
+  color: #333;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.4rem, 0.8vw, 0.5rem);
+  font-weight: 600;
+  color: #2f327d;
+}
+
+/* Success Section */
+.success-section {
+  text-align: center;
+  margin-top: clamp(3rem, 5vw, 4rem);
+  padding: 0 5%;
+}
+
+.success-section h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+}
+
+.success-section p {
+  max-width: clamp(30rem, 60vw, 37.5rem);
+  margin: clamp(0.75rem, 1.5vw, 1rem) auto 0;
+  color: #6b7280;
+}
+
+.success-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(7rem, 15vw, 8rem), 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.success-stats h3 {
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-weight: bold;
+  color: #3D5CFF;
+}
+
+.success-stats p {
+  color: #4b5563;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat h3 {
+  font-weight: 300;
+  font-size: clamp(3rem, 6vw, 4rem);
+  line-height: 100%;
+  background: linear-gradient(90deg, #136CB5 0%, #3D5CFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat p {
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 130%;
+  color: rgba(1, 5, 20, 0.8);
+}
+
+/* All-in-one Section */
+.allinone-section {
+  margin-top: clamp(4rem, 6vw, 5rem);
+  text-align: center;
+  padding: clamp(2.5rem, 5vw, 3.75rem) clamp(1rem, 2vw, 1.25rem);
+  background: #f9fafc;
+}
+
+.allinone-section h2 {
+  font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+  color: #2f327d;
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.allinone-section p {
+  max-width: clamp(35rem, 60vw, 43.75rem);
+  margin: 0 auto clamp(1.5rem, 3vw, 2.5rem) auto;
+  color: #555;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  line-height: 1.6;
+}
+
+.allinone-cards {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  flex-wrap: wrap;
+}
+
+.card-item {
+  background: #fff;
+  border-radius: clamp(0.75rem, 1.5vw, 1rem);
+  text-align: center;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  max-width: clamp(15rem, 25vw, 18.75rem);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.card-item:hover {
+  transform: translateY(clamp(-0.3rem, -0.5vw, -0.375rem));
+}
+
+.icon-wrapper {
+  width: clamp(3rem, 5vw, 3.75rem);
+  height: clamp(3rem, 5vw, 3.75rem);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto clamp(0.75rem, 1.5vw, 1rem) auto;
+}
+
+.icon {
+  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  color: #fff;
+}
+
+.card-item h3 {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 600;
+  margin-bottom: clamp(0.5rem, 1vw, 0.625rem);
+  color: #2f327d;
+}
+
+.card-item p {
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Media query for extreme zoom levels */
+@media (max-width: 600px) or (min-width: 2000px) {
+  .hero-left,
+  .hero-right {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .hero-left p {
+    max-width: 90%;
+  }
+
+  .teacher-img {
+    height: clamp(50vh, 70vw, 70vh);
+  }
+
+  .card {
+    min-width: clamp(6rem, 20vw, 8rem);
+    padding: clamp(0.4rem, 1vw, 0.8rem);
+  }
+
+  .card-1 {
+    top: 40%;
+    left: 0;
+  }
+
+  .card-2 {
+    bottom: 10%;
+    right: 0;
+  }
+
+  .card-3 {
+    top: 70%;
+    left: 2%;
+  }
+
+  .card-4 {
+    top: 25%;
+    right: 0;
+  }
+
+  .success-stats {
+    grid-template-columns: repeat(auto-fit, minmax(clamp(6rem, 12vw, 7rem), 1fr));
+  }
+
+  .allinone-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-item {
+    max-width: 90%;
+  }
+}
