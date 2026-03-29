@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   edtech_frontend:
-    image: nguyenduc1603/edtech-fe:1.0.3
+    image: nguyenduc1603/edtech-fe:latest
     ports:
       - "3332:80"
     restart: unless-stopped
