@@ -3,5 +3,5 @@ services:
   edtech_frontend:
     image: nguyenduc1603/edtech-fe:1.0.3
     ports:
-      - "5173:80"
+      - "3332:80"
     restart: unless-stopped
