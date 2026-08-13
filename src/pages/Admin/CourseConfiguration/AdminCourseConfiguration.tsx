@@ -126,12 +126,23 @@ export default function AdminCourseConfiguration() {
       const detail = await iapAdminService.updateCourseContentEnabled(course.courseId, enabled);
       setCourses((current) =>
         current.map((item) =>
-          item.courseId === course.courseId ? { ...item, contentEnabled: enabled } : item,
+          item.courseId === course.courseId
+            ? {
+                ...item,
+                contentEnabled: enabled,
+                ...(enabled ? { status: "APPROVED" } : {}),
+              }
+            : item,
         ),
       );
       setDetails((current) => ({ ...current, [course.courseId]: detail }));
       if (enabled) setExpandedCourses((current) => Array.from(new Set([...current, course.courseId])));
-      showToast(enabled ? "Đã bật khóa học và toàn bộ nội dung" : "Đã tắt khóa học", "success");
+      showToast(
+        enabled
+          ? "Đã duyệt, công khai và bật toàn bộ nội dung khóa học"
+          : "Đã tắt và ẩn khóa học khỏi học viên",
+        "success",
+      );
     } catch (error) {
       showToast(errorMessage(error, "Không thể cập nhật khóa học"), "error");
     } finally {
