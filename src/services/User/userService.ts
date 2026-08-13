@@ -3,8 +3,6 @@ import { useAuthStore } from "@/store/authStore";
 import type { StudentCountResponse, TeacherCountResponse, User } from "@/types/User/users.type";
 import api from "../api";
 
-const API_URL = import.meta.env.VITE_API_URL;
-
 function getRoleString(raw: any): string {
   if (typeof raw === "string") return raw;
 
@@ -31,7 +29,7 @@ export const userService = {
   async getProfile(): Promise<User | null> {
     const state = useAuthStore.getState();
     try {
-      const res = await api.get(`${API_URL}/auth/me`);
+      const res = await api.get("/auth/me");
 
       const data = res.data?.data;
 
@@ -60,7 +58,7 @@ export const userService = {
   },
   async logoutServer() {
     try {
-      await api.post(`${API_URL}/auth/logout`);
+      await api.post("/auth/logout");
     } catch (err) {
       console.warn("Logout server thất bại:", err);
     } finally {
@@ -71,7 +69,7 @@ export const userService = {
   async getUser(): Promise<User | null> {
     const state = useAuthStore.getState();
     try {
-      const res = await api.get(`${API_URL}/users/me/profile`);
+      const res = await api.get("/users/me/profile");
 
       const data = res.data?.data;
 

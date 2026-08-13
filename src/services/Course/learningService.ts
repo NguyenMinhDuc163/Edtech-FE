@@ -1,4 +1,4 @@
-import api from "../api";
+import api, { API_BASE_URL } from "../api";
 
 export const learningApi = {
   updateProgress: (payload: {
@@ -19,7 +19,7 @@ export const learningApi = {
   sendBeaconLog: (data: any) => {
     const blob = new Blob([JSON.stringify(data)], { type: "application/json" });
     navigator.sendBeacon(
-      `${import.meta.env.VITE_API_URL}/learning/progress`,
+      `${API_BASE_URL}/learning/progress`,
       blob
     );
   },

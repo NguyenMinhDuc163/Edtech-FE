@@ -17,10 +17,13 @@ declare module "axios" {
   }
 }
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:3000";
+export const API_BASE_URL =
+  window.__RUNTIME_CONFIG__?.VITE_API_URL ||
+  import.meta.env.VITE_API_URL ||
+  "http://127.0.0.1:3000";
 
 const api = axios.create({
-  baseURL: BASE_URL,
+  baseURL: API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
@@ -28,7 +31,7 @@ const api = axios.create({
 });
 
 const refreshClient = axios.create({
-  baseURL: BASE_URL,
+  baseURL: API_BASE_URL,
   headers: { "Content-Type": "application/json" },
 });
 

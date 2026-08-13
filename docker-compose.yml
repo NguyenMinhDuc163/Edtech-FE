@@ -2,6 +2,8 @@ version: "3.8"
 services:
   edtech_frontend:
     image: nguyenduc1603/edtech-fe:latest
+    environment:
+      VITE_API_URL: ${VITE_API_URL:?VITE_API_URL is required}
     ports:
       - "3332:80"
     restart: unless-stopped

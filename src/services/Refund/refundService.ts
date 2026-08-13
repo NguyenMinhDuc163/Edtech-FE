@@ -1,8 +1,6 @@
 import api from "../api";
 import type { Refund, RefundsResponse, RefundDetailResponse } from "@/types/Refund/refund.type";
 
-const API_URL = import.meta.env.VITE_API_URL;
-
 interface ApproveRejectResult {
   vnpRequestId: string;
   success: boolean;
@@ -23,17 +21,17 @@ interface ApproveRejectResponse {
 
 export const refundService = {
   async getAllRefunds(): Promise<Refund[]> {
-    const response = await api.get<RefundsResponse>(`${API_URL}/api/refund/all`);
+    const response = await api.get<RefundsResponse>("/api/refund/all");
     return response.data.data.data.refunds || [];
   },
 
   async getRefundDetail(vnpRequestId: string): Promise<Refund> {
-    const response = await api.get<RefundDetailResponse>(`${API_URL}/api/refund/detail/${vnpRequestId}`);
+    const response = await api.get<RefundDetailResponse>(`/api/refund/detail/${vnpRequestId}`);
     return response.data.data.data;
   },
 
   async approveRefunds(vnpRequestIds: string[]): Promise<ApproveRejectResponse["data"]> {
-    const response = await api.post<ApproveRejectResponse>(`${API_URL}/api/refund/approve`, {
+    const response = await api.post<ApproveRejectResponse>("/api/refund/approve", {
       vnpRequestIds,
       action: "APPROVE",
     });
@@ -41,7 +39,7 @@ export const refundService = {
   },
 
   async rejectRefunds(vnpRequestIds: string[], rejectReason: string): Promise<ApproveRejectResponse["data"]> {
-    const response = await api.post<ApproveRejectResponse>(`${API_URL}/api/refund/approve`, {
+    const response = await api.post<ApproveRejectResponse>("/api/refund/approve", {
       vnpRequestIds,
       action: "REJECT",
       rejectReason,

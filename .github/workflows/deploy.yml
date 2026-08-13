@@ -29,15 +29,6 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "Building version: $VERSION"
 
-      - name: Create .env file
-        run: |
-          if [ -z "${{ secrets.VITE_API_URL }}" ]; then
-            echo "VITE_API_URL=https://edtech-service.ndtech.io.vn" > .env
-          else
-            echo "VITE_API_URL=${{ secrets.VITE_API_URL }}" > .env
-          fi
-        shell: bash
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
