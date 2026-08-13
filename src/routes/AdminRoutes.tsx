@@ -19,6 +19,8 @@ import AdminRefundDetail from "@/pages/Admin/Refunds/AdminRefundDetail";
 import AdminPaymentHistory from "@/pages/Admin/Payments/AdminPaymentHistory";
 import AdminPaymentDetail from "@/pages/Admin/Payments/AdminPaymentDetail";
 import AdminSystemParameters from "@/pages/Admin/SystemParameters/AdminSystemParameters";
+import AdminIapProducts from "@/pages/Admin/IapProducts/AdminIapProducts";
+import AdminCourseConfiguration from "@/pages/Admin/CourseConfiguration/AdminCourseConfiguration";
 const AdminRoutes: React.FC = () => {
   return (
     <ProtectedRoute allowedRoles={["admin"]}>
@@ -47,6 +49,8 @@ const AdminRoutes: React.FC = () => {
           <Route path="refunds/:vnpRequestId" element={<AdminRefundDetail />} />
           <Route path="payments" element={<AdminPaymentHistory />} />
           <Route path="payments/:paymentId" element={<AdminPaymentDetail />} />
+          <Route path="course-configuration" element={<AdminCourseConfiguration />} />
+          <Route path="iap-products" element={<AdminIapProducts />} />
           <Route path="system-parameters" element={<AdminSystemParameters />} />
 
           <Route path="*" element={<NotFound />} />

@@ -21,6 +21,8 @@ export interface Course {
   reviews?: CourseReview[];
   isPreview?: string;
   isPaid?: boolean;
+  mobileIapEnabled?: boolean;
+  contentEnabled?: boolean;
   userId?: string;
   createdAt?: string;
   updatedAt?: string;

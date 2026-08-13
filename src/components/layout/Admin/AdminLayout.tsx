@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
-import { LayoutDashboard, BookOpen, Users, LogOut, ClipboardCheck, History, Settings } from "lucide-react";
+import { LayoutDashboard, BookOpen, Users, LogOut, ClipboardCheck, History, Settings, Smartphone, SlidersHorizontal } from "lucide-react";
 import "./AdminLayout.css";
 import { useHandleLogout } from "@/hooks/useLogOut";
 
@@ -57,6 +57,24 @@ export default function AdminLayout() {
             }
           >
             <History size={18} /> <span>Lịch sử thanh toán</span>
+          </NavLink>
+
+          <NavLink
+            to="/admin/course-configuration"
+            className={({ isActive }) =>
+              `admin-menu-item ${isActive ? "active" : ""}`
+            }
+          >
+            <SlidersHorizontal size={18} /> <span>Cấu hình khóa học</span>
+          </NavLink>
+
+          <NavLink
+            to="/admin/iap-products"
+            className={({ isActive }) =>
+              `admin-menu-item ${isActive ? "active" : ""}`
+            }
+          >
+            <Smartphone size={18} /> <span>Sản phẩm IAP</span>
           </NavLink>
 
           <NavLink
