@@ -19,6 +19,7 @@ import "./AdminCourseConfiguration.css";
 type CourseRow = {
   courseId: string;
   title: string;
+  status: string;
   contentEnabled: boolean;
 };
 
@@ -72,6 +73,7 @@ export default function AdminCourseConfiguration() {
           response.courses.map((item) => ({
             courseId: String(item.courseId),
             title: String(item.title ?? "Khóa học chưa đặt tên"),
+            status: String(item.status ?? "DRAFT"),
             contentEnabled: Boolean(item.contentEnabled),
           })),
         );
@@ -251,7 +253,15 @@ export default function AdminCourseConfiguration() {
                   <span className="course-config-course-icon"><Layers3 size={21} /></span>
                   <div className="course-config-course-name">
                     <strong>{course.title}</strong>
-                    <small>{course.contentEnabled ? "Đang bật" : "Đang tắt"}</small>
+                    <small>
+                      {course.contentEnabled
+                        ? course.status === "APPROVED"
+                          ? "Đang hiển thị cho học viên"
+                          : "Đã bật · Chờ khóa học được duyệt"
+                        : course.status === "APPROVED"
+                          ? "Đang tắt"
+                          : "Đang tắt · Chưa được duyệt"}
+                    </small>
                   </div>
                   <Toggle
                     checked={course.contentEnabled}
